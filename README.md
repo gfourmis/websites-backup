@@ -45,7 +45,7 @@ crontab -e
 ```
 El primer día de cada mes
 ---
-0 3 1 * * /bin/bash /home/ubuntu/scripts/backups/websites-backup/run.sh
+> 0 3 1 * * /bin/bash /home/ubuntu/scripts/backups/websites-backup/run.sh
 
 
 
