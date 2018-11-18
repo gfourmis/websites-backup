@@ -22,10 +22,14 @@ nano run.conf
 ```
 
 ## Asignar permisos al script
+```
 chmod +x run.sh
+```
 
 ## Ejecutar script
+```
 ./run.sh
+```
 
 ## Listar archivos
 ```
@@ -33,13 +37,14 @@ ls -lh ~/backups/
 ```
 
 ## Configurar destino
-Previamente se debe configurar AWS cli para poder subir los archivos a AWS S3
+Previamente **se debe configurar _AWS cli_** para poder subir los archivos a *AWS S3* en lo posible no almacenar los archivos en ~~local~~.
 
 ## Configurar tareas programadas
 ```
 crontab -e
 ```
 El primer día de cada mes
+---
 0 3 1 * * /bin/bash /home/ubuntu/scripts/backups/websites-backup/run.sh
 
 
