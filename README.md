@@ -43,7 +43,7 @@ Previamente **se debe configurar _AWS cli_** para poder subir los archivos a *AW
 ```
 crontab -e
 ```
-El primer día de cada mes
+El primer día de cada mes a las 03:00
 > 0 3 1 * * /bin/bash /home/ubuntu/scripts/backups/websites-backup/run.sh
 
 
