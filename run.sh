@@ -10,12 +10,13 @@ DATE=$(date +"%F")
 WWWDIR=/var/www
 PUBDIR=public_html
 TRGDIR=~/backups/sites
-BCKDIR=$TRGDIR/$DATE
 FILEEXT=tar.gz
+SCRIPT_CONFIG_FILE=run.conf
 AWS_BIN=/usr/local/bin/aws
 
-#Definir el nombre del bucket
-BUCKET_NAME=my-aws-s3-bucket-name
+#Cargar parametros
+source $SCRIPT_CONFIG_FILE
+BCKDIR=$TRGDIR/$DATE
 
 #Definir nombre de los sitios
 sites=(example.com example.org example.co)
