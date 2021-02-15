@@ -44,15 +44,15 @@ for site in "${sites[@]}"; do
 		tar Ozxf $destination >/dev/null
 		status=$?
 
-		BUCKET_DIR=backups/sites
+		BUCKET_DIR=$sites/sites/$DATE
 		BUCKET_PATH=$BUCKET_NAME/$BUCKET_DIR
 
-echo "Uploading $AWS_BIN s3 cp $destination s3://$BUCKET_PATH/$site/$DATE/files"
+echo "Uploading $AWS_BIN s3 cp $destination s3://$BUCKET_PATH/"
 
 		# Validar salida del comando anterior
 		if test $status -eq 0; then
 			echo "Uploading $filename"
-			$AWS_BIN s3 cp $destination s3://$BUCKET_PATH/$site/$DATE/files/
+			$AWS_BIN s3 cp $destination s3://$BUCKET_PATH/
 		fi
 
 	fi
