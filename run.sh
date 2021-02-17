@@ -1,6 +1,7 @@
 #!/bin/bash
 #Purpose = Backup of Important Data
 #Created on 18-11-2018
+#Update on 15-02-2021
 #Author = frojas
 #Version 1.1
 #START
@@ -9,10 +10,12 @@
 DATE=$(date +"%F")
 WWWDIR=/var/www
 PUBDIR=public_html
-TRGDIR=~/backups/sites
 FILEEXT=tar.gz
 SCRIPT_CONFIG_FILE=run.conf
 AWS_BIN=/usr/local/bin/aws
+
+#Definir directorios
+TRGDIR=~/backups/sites
 
 #Cargar parametros
 source $SCRIPT_CONFIG_FILE
